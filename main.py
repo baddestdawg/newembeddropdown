@@ -7,8 +7,6 @@ import time
 import asyncio
 
 # --- Config ---
-from keep_alive import keep_alive
-
 TOKEN = os.getenv("DISCORD_TOKEN")
 AUTHORIZED_LAUNCH_ROLE = 1390820873086435460  # Role that can launch the embed
 TRADER_ROLE = 1390820117352550504  # Trader role that can use the menu
@@ -1034,5 +1032,4 @@ if __name__ == "__main__":
         print("Please set your Discord bot token in the Secrets tab.")
     else:
         print("🤖 Starting Discord Trading Bot...")
-        keep_alive()  # Start the Flask server to keep the bot alive
         bot.run(TOKEN)
